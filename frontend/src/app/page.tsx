@@ -3,6 +3,7 @@ import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
 import { IoMdCheckbox, IoMdCheckboxOutline } from "react-icons/io";
 import { MdDashboard, MdForklift } from "react-icons/md";
+import { Footer } from "./components/footer";
 
 export default function Home() {
   return (
@@ -95,11 +96,7 @@ export default function Home() {
         </main>
 
       </div>
-      <footer 
-      className="p-6 bg-white/40 text-center 
-              text-red-900 text-sm">
-        Todos os direitos reservados &copy; 2024
-      </footer>
+     <Footer/>
     </div>
   );
 }
