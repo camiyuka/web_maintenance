@@ -12,7 +12,6 @@ export default function Home() {
       <div className="flex-1 flex">
 
       <Aside/>
-      \\ main 
         <main className="flex-1 flex flex-col">
 
           <h1 className="text-4xl font-bold uppercase w-full
