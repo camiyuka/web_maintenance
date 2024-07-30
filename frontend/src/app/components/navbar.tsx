@@ -1,7 +1,7 @@
 import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
 import { MdDashboard, MdForklift } from "react-icons/md";
 
-export function NavLink(){
+export function NavBar(){
 
     const links = [
         {target: "#",
@@ -28,14 +28,14 @@ export function NavLink(){
 
  
     return (
-        <div>
-            {links.map((obj) => (
-            <a href={obj.target} className="flex items-center gap-4 hover:font-semibold">
+        <nav className="space-y-4 flex flex-col mt-8">
+            {links.map((obj, index) => (
+            <a href={obj.target} key={index} className="flex items-center gap-4 hover:font-semibold">
                 {obj.icon}
                 {obj.text}
             </a>
             ))}
-        </div>
+        </nav>
         );
     }
     
