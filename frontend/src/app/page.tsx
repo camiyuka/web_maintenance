@@ -6,9 +6,18 @@ import { MdDashboard, MdForklift } from "react-icons/md";
 import { Footer } from "./components/footer";
 import { Aside } from "./components/aside";
 import { Card } from "./components/card";
+import { Table } from "./components/table";
 
 export default function Home() {
+
+  const data = [
+    { Ambiente: 'The Sliding Mr. Bones', Equipamento: 'Malcolm Lockyer', Solicitação: 12, Atendimento: 12, Ações: "botões"},
+    { Ambiente: 'The Sliding Mr. Bones', Equipamento: 'Malcolm Lockyer', Solicitação: 12, Atendimento: 12, Ações: "botões"},
+    { Ambiente: 'The Sliding Mr. Bones', Equipamento: 'Malcolm Lockyer', Solicitação: 12, Atendimento: 12, Ações: "botões"},
+  ]  
+
   return (
+  
     <div className="h-screen flex flex-col">
       <div className="flex-1 flex">
 
@@ -29,11 +38,14 @@ export default function Home() {
             </div>
           </div>
 
-
+          <div className="container mx-auto p-4">
+          <h1 className="text-2xl font-bold mb-4">User Data</h1>
+          <Table/>
+          </div>
         </main>
 
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
