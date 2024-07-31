@@ -18,17 +18,19 @@ export default function Home() {
 
   return (
   
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col overflow-hidden">  
       <div className="flex-1 flex">
 
         <Aside />
         <main className="flex-1 flex flex-col">
 
           <h1 className="text-4xl font-bold uppercase w-full
-           bg-white/40 p-6 text-center">
+           bg-white/40 p-6 text-center"> Sistema de Gestão de Manutenção</h1>
 
-            Sistema de Gestão de Manutenção</h1>
-
+            <div className="max-h-svh overflow-y-scroll"></div> 
+            {/* no tamanho disponível (shv) scroll no y */}
+           
+        <div className="max-h-svh overflow-y-scroll">
           <div>
             <div className="grid grid-cols-4 gap-4 p-6">
               <Card color="bg-orange-200 p-6 flex gap-2 rounded-xl" quantity="100" text="Ambientes" icon={<FaBuilding size={48} />} />
@@ -39,8 +41,10 @@ export default function Home() {
           </div>
 
           <div className="container mx-auto p-4">
-          <h1 className="text-2xl font-bold mb-4">User Data</h1>
-          <Table/>
+            <h1 className="text-2xl font-bold mb-4">User Data</h1>
+              <Table/>
+          </div>
+
           </div>
         </main>
 

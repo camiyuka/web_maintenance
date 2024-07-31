@@ -23,6 +23,97 @@ export function Table(){
       Atendimento: 1234,
       Ações:"botões"
     },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
+    {
+      Ambiente: "The Sliding Mr. Bones (Next Stop, Pottersville)",
+      Equipamento: "Dashboard",
+      Solicitação: 1234,
+      Atendimento: 1234,
+      Ações:"botões"
+    },
   ];
 
 return (
