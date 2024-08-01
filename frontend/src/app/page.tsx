@@ -9,6 +9,7 @@ import { Aside } from "./components/aside";
 import { Card } from "./components/card";
 import { Table } from "./components/table";
 import { BarChartHero } from "./components/bar_charts";
+import Title from "./components/title";
 
 
 export default function Home() {
@@ -16,11 +17,11 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex-1 flex h-4/5 overflow-hidden">
-        <Aside />
+        <Aside/>
+
+
         <main className="flex-1 flex flex-col overflow-hidden">
-          <h1 className="text-4xl font-bold uppercase w-full bg-white/40 p-6 text-center">
-            Sistema de Gestão de Manutenção
-          </h1>
+          <Title text="Sistema de gerenciamento" />
 
           <div className="flex-1 overflow-y-auto p-6">
             <div className="grid grid-cols-4 gap-4 mb-6">
@@ -31,13 +32,12 @@ export default function Home() {
             </div>
             <div className="container mx-auto">
               <h1 className="text-2xl font-bold mb-4">User Data</h1>
-              <Table />
+              <Table/>
               
               <BarChartHero/>
         <div className="mx-auto max-w-md">
         
         </div>
-);
 
             </div>
           </div>
