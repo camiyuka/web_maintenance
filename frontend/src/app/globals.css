@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .data-table tr{
+    padding: 1,5rem;
+  }
+
+  data-table td td{
+    padding: 0,75rem;
+  }
+}
