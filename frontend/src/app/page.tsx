@@ -10,6 +10,7 @@ import { Card } from "./components/card";
 import { Table } from "./components/table";
 import { BarChartHero } from "./components/bar_charts";
 import Title from "./components/title";
+import FormsMaquinas from "./components/form_input";
 
 
 export default function Home() {
@@ -35,9 +36,8 @@ export default function Home() {
               <Table/>
               
               <BarChartHero/>
-        <div className="mx-auto max-w-md">
-        
-        </div>
+              <FormsMaquinas/>
+        <div className="mx-auto max-w-md"></div>
 
             </div>
           </div>
