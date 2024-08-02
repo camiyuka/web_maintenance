@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Forms() {
+export default function FormsMaquinas() {
   return (
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h1 className="text-2xl font-bold mb-6">Cadastro de Máquinas</h1>
