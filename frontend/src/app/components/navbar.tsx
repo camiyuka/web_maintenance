@@ -12,8 +12,8 @@ export function NavBar(){
         text: "Gerenciamento de manutenções",
         icon: <FaBuilding />
         }, 
-        {target: "#",
-        text: "Equipamentos",
+        {target: "./pecas",
+        text: "Controle de Estoque de Peças",
         icon: <MdForklift />
         }, 
         {target: "#",
