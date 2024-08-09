@@ -4,16 +4,16 @@ import { MdDashboard, MdForklift } from "react-icons/md";
 export function NavBar(){
 
     const links = [
-        {target: "#",
-        text: "Dashboard",
+        {target: "./maquinas",
+        text: "Gerenciamento de máquinas",
         icon: <MdDashboard />
         }, 
-        {target: "#",
-        text: "Ambientes",
+        {target: "./manutencoes",
+        text: "Gerenciamento de manutenções",
         icon: <FaBuilding />
         }, 
-        {target: "#",
-        text: "Equipamentos",
+        {target: "./pecas",
+        text: "Controle de Estoque de Peças",
         icon: <MdForklift />
         }, 
         {target: "#",
