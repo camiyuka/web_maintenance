@@ -16,12 +16,12 @@ export function NavBar(){
         text: "Controle de Estoque de Peças",
         icon: <MdForklift />
         }, 
-        {target: "#",
-        text: "Manutenções",
+        {target: "./equipes",
+        text: "Gerenciamento de Equipes",
         icon: <FaTools />
         }, 
-        {target: "#",
-        text: "Usuário",
+        {target: "./usuarios",
+        text: "Gerenciamento de Usuários",
         icon: <FaUsers />
         }, 
     ];
