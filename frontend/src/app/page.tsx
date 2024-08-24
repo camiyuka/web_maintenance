@@ -49,7 +49,6 @@ export default function Home() {
               <h1 className="text-2xl font-bold mb-4">User Data</h1>
               <Table />
               <BarChartHero />
-              <FormsMaquinas />
               <div className="mx-auto max-w-md"></div>
             </div>
           </div>
