@@ -1,6 +1,6 @@
 "use client"
 import { Footer } from "../components/footer";
-import FormsSolicitacaoManutencao from "../components/form_manutencao";
+import FormsSolicitacoes from "../components/form_manutencao";
 import { Aside } from "../components/aside";
 import Title from "../components/title";
 import React from "react";
@@ -16,10 +16,9 @@ export default function Home() {
                 <main className="flex-1 flex flex-col overflow-hidden">
                     <Title text="Gerenciamento de Manutenção" />
                     <div className="flex-1 overflow-y-auto p-6">
-                        <FormsSolicitacaoManutencao/>
 
                         <div className="container mx-auto">
-                            <h1 className="text-2xl font-bold text-center p-5"> Visualização das Solicitações </h1>
+                
                             <SolicitacaoManutencao/>
                             <div className="mx-auto max-w-md"></div>
                         </div>
