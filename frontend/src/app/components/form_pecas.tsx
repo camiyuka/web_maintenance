@@ -149,13 +149,22 @@ export default function FormsCadastro() {
       <h2 className="text-xl font-bold mt-10 mb-4">Estoque de Peças</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {pecas.map((peca, index) => (
-          <Card
-            key={index}
-            color="bg-pink-800 p-6 flex gap-2 rounded-xl"
-            quantity={quantidadeEstoque[peca.codigo]?.toString() || '0'}
-            text={peca.nome}
-          />
+          <div key={index} className="relative">
+            <Card
+              color="bg-pink-800 p-6 flex gap-2 rounded-xl"
+              quantity={quantidadeEstoque[peca.codigo]?.toString() || '0'}
+              text={peca.nome}
+            />
+           <button
+            type="submit"
+            className="bg-pink-900 text-white px-4 py-2 rounded mx-auto gap-2"
+          >
+            Gerar relatório
+          </button>
+          </div>
+          
         ))}
+        
       </div>
     </div>
   );
