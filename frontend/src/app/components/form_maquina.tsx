@@ -90,6 +90,7 @@ export default function FormsMaquinas() {
               <summary className="cursor-pointer text-blue-500">Histórico de Manutenção</summary>
               <p>{maquina.manutencao}</p>
             </details>
+            <button type="submit" className="w-20% py-2 px-4 bg-pink-800 text-white font-semibold rounded-md shadow-sm hover:bg-pink-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Gerar relatório</button>
           </div>
         ))}
       </div>
