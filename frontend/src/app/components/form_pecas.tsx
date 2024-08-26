@@ -47,6 +47,7 @@ export default function FormsCadastro() {
     e.currentTarget.reset();
   };
 
+  // function to deal with form submit
   const handleRegistroSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -65,6 +66,7 @@ export default function FormsCadastro() {
         ? peca.quantidade_estoque + novoRegistro.quantidade
         : peca.quantidade_estoque - novoRegistro.quantidade;
 
+      // update parts and quantity in storage
       const updatedPecas = pecas.map(p => 
         p.codigo === pecaCodigo 
           ? { ...p, quantidade_estoque: newQuantity } 
@@ -79,6 +81,7 @@ export default function FormsCadastro() {
       setRegistros([...registros, novoRegistro]);
     }
 
+    // resetting the form after submission
     e.currentTarget.reset();
   };
 
