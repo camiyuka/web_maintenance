@@ -5,6 +5,7 @@ import { NavBar } from "./navbar";
 
     export function Aside() {
         return ( 
+        // the aside element acts as a container with specific styles
         <aside className="w-64 p-6 bg-gray-100">
           <a href="http://localhost:3000/" rel="noopener noreferrer">
                 <img 
