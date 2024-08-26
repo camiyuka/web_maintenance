@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 
+// defining the 'solicitacao' interface to represent the structure of a request object
 interface Solicitacao {
   descricao: string;
   data_solicitacao: string;
@@ -14,13 +15,18 @@ interface Solicitacao {
   pecas_materiais?: { item: string; quantidade: number; fornecedor: string }[];
 }
 
+
+// defining the 'formssolicitacoes' component
 export default function FormsSolicitacoes() {
+  // using the 'useState' hook to manage the list of requests and status
   const [solicitacoes, setSolicitacoes] = useState<Solicitacao[]>([]);
   const [status, setStatus] = useState("pendente");
 
+  // handling form submission to add a new request
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // extracting form data
     const formData = new FormData(e.currentTarget);
     const novaSolicitacao: Solicitacao = {
       descricao: formData.get('descricao') as string,
@@ -34,10 +40,12 @@ export default function FormsSolicitacoes() {
       pecas_materiais: [],
     };
 
+    // updating the list of requests with the new request
     setSolicitacoes([...solicitacoes, novaSolicitacao]);
-    e.currentTarget.reset(); // Limpa o formulário após o envio
+    e.currentTarget.reset();
   };
 
+  // handling status change for a specific request
   const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>, index: number) => {
     const updatedSolicitacoes = [...solicitacoes];
     updatedSolicitacoes[index].status = e.target.value;

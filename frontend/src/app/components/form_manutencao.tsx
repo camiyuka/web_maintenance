@@ -1,5 +1,6 @@
 import React from 'react';
 
+// defining the 'formssolicitacaomanutencao' component
 export default function FormsSolicitacaoManutencao() {
   return (
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
