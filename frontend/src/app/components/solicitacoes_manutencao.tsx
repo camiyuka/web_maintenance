@@ -138,6 +138,7 @@ export default function FormsSolicitacoes() {
             {solicitacao.equipe && (
               <p>Equipe: {solicitacao.equipe}</p>
             )}
+             <button type="submit" className="w-20% py-2 px-4 bg-pink-800 text-white font-semibold rounded-md shadow-sm hover:bg-pink-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Gerar relatório</button>
           </div>
         ))}
       </div>
