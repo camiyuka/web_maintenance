@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+
+// defining the 'maquina' interface to represent the structure of a machine object
 interface Maquina {
   nome: string;
   tipo: string;
@@ -13,11 +15,14 @@ interface Maquina {
 }
 
 export default function FormsMaquinas() {
+  // using the 'useState' hook to manage the list of machines
   const [maquinas, setMaquinas] = useState<Maquina[]>([]);
 
+  // handling form submission to add a new machine
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // extracting form data
     const formData = new FormData(e.currentTarget);
     const novaMaquina: Maquina = {
       nome: formData.get('nome') as string,
@@ -29,8 +34,11 @@ export default function FormsMaquinas() {
       manutencao: formData.get('manutencao') as string,
     };
 
+    // updating the list of machines with the new machine
     setMaquinas([...maquinas, novaMaquina]);
-    e.currentTarget.reset(); // Limpa o formulário após o envio
+
+    // resetting the form after submission
+    e.currentTarget.reset();
   };
 
   return (
