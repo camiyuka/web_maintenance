@@ -5,7 +5,7 @@ export default function FormsSolicitacaoManutencao() {
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h1 className="text-2xl font-bold mb-6">Cadastro de Solicitações de Manutenção</h1>
       <form>
-        {/* Descrição do Problema */}
+
         <div className="mb-4">
           <label htmlFor="descricao_problema" className="block text-sm font-medium text-gray-700">Descrição do problema:</label>
           <textarea
@@ -17,7 +17,6 @@ export default function FormsSolicitacaoManutencao() {
           />
         </div>
 
-        {/* Data da Solicitação */}
         <div className="mb-4">
           <label htmlFor="data_solicitacao" className="block text-sm font-medium text-gray-700">Data da solicitação:</label>
           <input
@@ -29,7 +28,6 @@ export default function FormsSolicitacaoManutencao() {
           />
         </div>
 
-        {/* Prioridade */}
         <div className="mb-4">
           <label htmlFor="prioridade" className="block text-sm font-medium text-gray-700">Prioridade:</label>
           <select
@@ -45,7 +43,6 @@ export default function FormsSolicitacaoManutencao() {
           </select>
         </div>
 
-        {/* Responsável */}
         <div className="mb-4">
           <label htmlFor="responsavel" className="block text-sm font-medium text-gray-700">Responsável:</label>
           <input
