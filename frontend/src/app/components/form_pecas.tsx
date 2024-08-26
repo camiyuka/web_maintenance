@@ -3,12 +3,14 @@
 import React, { useState } from 'react';
 import { Card } from './card';
 
+// defining the 'registro' interface to represent the structure of a machine object
 interface Registro {
   tipo: 'entrada' | 'saida';
   data: string;
   quantidade: number;
 }
 
+// defining the 'peca' interface to represent the structure of a machine object
 interface Peca {
   nome: string;
   codigo: string;
@@ -18,6 +20,7 @@ interface Peca {
 }
 
 export default function FormsCadastro() {
+    // using the 'useState' hook to manage the list of parts
   const [pecas, setPecas] = useState<Peca[]>([]);
   const [registros, setRegistros] = useState<Registro[]>([]);
   const [quantidadeEstoque, setQuantidadeEstoque] = useState<Record<string, number>>({});
@@ -34,12 +37,14 @@ export default function FormsCadastro() {
       valor_unitario: Number(formData.get('valor'))
     };
 
+    // updating the list of parts with the new machine
     setPecas([...pecas, novaPeca]);
     setQuantidadeEstoque(prev => ({
       ...prev,
       [novaPeca.codigo]: novaPeca.quantidade_estoque
     }));
-    e.currentTarget.reset(); // Limpa o formulário após o envio
+    // resetting the form after submission
+    e.currentTarget.reset();
   };
 
   const handleRegistroSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -74,7 +79,7 @@ export default function FormsCadastro() {
       setRegistros([...registros, novoRegistro]);
     }
 
-    e.currentTarget.reset(); // Limpa o formulário após o envio
+    e.currentTarget.reset();
   };
 
   return (
