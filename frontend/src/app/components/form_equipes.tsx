@@ -2,31 +2,37 @@
 
 import React, { useState } from 'react';
 
+// defining the 'colaborador' interface to represent the structure of a machine object
 interface Colaborador {
   nome: string;
   especialidade: string;
   disponivel: boolean;
 }
 
+// defining the 'equipe' interface to represent the structure of a machine object
 interface Equipe {
   nome: string;
   codigo: string;
   colaboradores: Colaborador[];
 }
 
+// defining the 'solicitação' interface to represent the structure of a machine object
 interface Solicitacao {
   descricao: string;
   equipeAtribuida: string | null;
 }
 
 export default function Manutencao() {
+  // state to manage the list of teams, requests and manage selected team
   const [equipes, setEquipes] = useState<Equipe[]>([]);
   const [solicitacoes, setSolicitacoes] = useState<Solicitacao[]>([]);
   const [equipeSelecionada, setEquipeSelecionada] = useState<string | null>(null);
 
+  // function to handle form submission for creating a new team
   const handleEquipeSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // creating a new team object with the data from the form
     const formData = new FormData(e.currentTarget);
     const novaEquipe: Equipe = {
       nome: formData.get('nome') as string,
@@ -34,22 +40,28 @@ export default function Manutencao() {
       colaboradores: []
     };
 
+    // adding the new team to the state
     setEquipes(prev => [...prev, novaEquipe]);
 
+    // resetting the form after submission
     e.currentTarget.reset(); 
   };
 
+  // function to handle form submission for adding a new collaborator to a team
   const handleColaboradorSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
     const nomeEquipe = formData.get('equipe') as string;
+
+    // creating a new collaborator object with the data from the form
     const novoColaborador: Colaborador = {
       nome: formData.get('nome') as string,
       especialidade: formData.get('especialidade') as string,
       disponivel: true
     };
 
+    // updating the state to add the new collaborator to the correct team
     setEquipes(prev =>
       prev.map(equipe =>
         equipe.codigo === nomeEquipe
@@ -58,21 +70,26 @@ export default function Manutencao() {
       )
     );
 
+    // resetting the form after submission
     e.currentTarget.reset();
   };
 
 
+   // function to handle form submission for registering a new maintenance request
   const handleSolicitacaoSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
+    // creating a new maintenance request object with the data from the form
     const novaSolicitacao: Solicitacao = {
       descricao: formData.get('descricao') as string,
       equipeAtribuida: formData.get('equipeAtribuida') as string || null
     };
 
+    // adding the new maintenance request to the state
     setSolicitacoes(prev => [...prev, novaSolicitacao]);
 
+     // if a team is assigned to the maintenance request, update the team's collaborators to mark them as unavailable
     if (novaSolicitacao.equipeAtribuida) {
       setEquipes(prev =>
         prev.map(equipe =>
